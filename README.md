@@ -21,4 +21,4 @@
 **Resume Bullet**
 Designed 5-stage pipelined RV32I processor in Verilog on Xilinx FPGA; implemented hazard detection and forwarding; synthesized at 80 MHz with full testbench coverage.
 
-GitHub: https://github.com/YOUR-USERNAME/rv32i-pipelined-xilinx-fpga
+GitHub: https://github.com/ShreyaDas2810/rv32i-pipelined-xilinx-fpga
