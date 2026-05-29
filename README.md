@@ -1,24 +1,26 @@
-# RV32I Pipelined RISC-V Processor on Xilinx FPGA
+# RISC-V 32-bit CPU Core
 
-5-stage pipelined RV32I core implemented in Verilog using Xilinx ISE 14.7.
+A 5-stage pipelined RISC-V RV32I processor implemented in Verilog for Xilinx Artix-7 FPGAs.
 
-**Features**
-- 5-stage pipeline (IF-ID-EX-MEM-WB)
-- Hazard detection unit + forwarding logic
-- Supports 20+ RV32I instructions (add, sub, lw, sw, beq, etc.)
-- Block RAM for instruction & data memory
-- UART output for debugging on FPGA
+## Features
+- 5-stage pipeline (Fetch → Decode → Execute → Memory → Writeback)
+- Full RV32I ISA support
+- Hazard detection and data forwarding
+- Synthesizable for FPGA (Basys-3)
 
-**Target Hardware**
-- Xilinx Basys3 / Nexys4 (or any ISE-compatible board)
-- Achieved clock frequency: 80 MHz (post-synthesis)
+## Project Structure
+- `rtl/` - Verilog RTL modules
+- `sim/` - Testbenches and simulation files
+- `docs/` - Design documentation and diagrams
+- `vivado/` - Vivado project files
 
-**Project Status**
-- [ ] Single-cycle version completed
-- [ ] Pipelined version in progress
-- [ ] Full testbench coverage (Fibonacci, bubble sort, etc.)
+## Getting Started
+1. Open `vivado/risc-v-core.xpr` in Vivado
+2. Run behavioral simulation: Flow → Run Simulation
+3. Check `sim/` for testbench files
 
-**Resume Bullet**
-Designed 5-stage pipelined RV32I processor in Verilog on Xilinx FPGA; implemented hazard detection and forwarding; synthesized at 80 MHz with full testbench coverage.
+## Synthesis Results
+(Will update after synthesis)
 
-GitHub: https://github.com/ShreyaDas2810/rv32i-pipelined-xilinx-fpga
+## Author
+Shreya Das
