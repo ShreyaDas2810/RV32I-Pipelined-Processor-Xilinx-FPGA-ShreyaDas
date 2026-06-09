@@ -24,3 +24,24 @@ A 5-stage pipelined RISC-V RV32I processor implemented in Verilog for Xilinx Art
 
 ## Author
 Shreya Das
+ 
+A 5-stage pipelined RISC-V RV32I processor implemented in Verilog for Xilinx Artix-7 FPGAs. 
+ 
+- 5-stage pipeline with hazard detection 
+- Full RV32I ISA support 
+- Data forwarding to reduce stalls 
+- Synthesized for 80+ MHz 
+- Synthesized for 80+ MHz 
+- Synthesized for 80+ MHz 
+- ~15K LUTs on Artix-7 
+ 
+See `docs/ARCHITECTURE.md` for detailed pipeline design. 
+ 
+See `docs/SYNTHESIS_RESULTS.md` for Vivado synthesis metrics. 
+ 
+ 
+- `rtl/` - Verilog RTL modules 
+- `sim/` - Testbenches 
+- `sim/` - Testbenches 
+- `docs/` - Testbenches 
+- `vivado/` - Testbenches 
