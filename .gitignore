@@ -17,4 +17,4 @@ vivado_pid*.log
 
 # OS
 .DS_Store
-Thumbs.db
+risc-v-core/ 
