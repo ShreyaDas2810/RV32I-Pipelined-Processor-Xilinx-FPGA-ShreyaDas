@@ -1,47 +1,25 @@
-# RISC-V 32-bit CPU Core
+# RISC-V RV32I CPU Core
 
-A 5-stage pipelined RISC-V RV32I processor implemented in Verilog for Xilinx Artix-7 FPGAs.
+A 32-bit RISC-V (RV32I) processor with a classic 5-stage pipeline, implemented in Verilog and verified in Xilinx Vivado for an Artix-7 (Basys-3) target.
 
 ## Features
-- 5-stage pipeline (Fetch → Decode → Execute → Memory → Writeback)
-- Full RV32I ISA support
-- Hazard detection and data forwarding
-- Synthesizable for FPGA (Basys-3)
+- 5-stage pipeline: Fetch → Decode → Execute → Memory → Writeback
+- RV32I base integer instruction set
+- Hazard unit with data forwarding and load-use stall detection
+- Per-stage testbenches verified in Vivado behavioral simulation
 
-## Project Structure
-- `rtl/` - Verilog RTL modules
-- `sim/` - Testbenches and simulation files
-- `docs/` - Design documentation and diagrams
-- `vivado/` - Vivado project files
+## Repository Structure
+- `rtl/` — Verilog RTL modules (fetch, decode, execute, memory, writeback, hazard_unit, core)
+- `sim/testbenches/` — testbenches for each stage
+- `docs/` — design documentation
 
 ## Getting Started
-1. Open `vivado/risc-v-core.xpr` in Vivado
-2. Run behavioral simulation: Flow → Run Simulation
-3. Check `sim/` for testbench files
+1. Open the Vivado project (Artix-7, xc7a35t target).
+2. Run behavioral simulation: Flow → Run Simulation.
+3. Testbenches for each pipeline stage are in `sim/testbenches/`.
 
-## Synthesis Results
-(Will update after synthesis)
+## Synthesis & Implementation
+To be added after running synthesis/implementation in Vivado (target frequency, LUT/FF utilisation on Artix-7).
 
 ## Author
 Shreya Das
- 
-A 5-stage pipelined RISC-V RV32I processor implemented in Verilog for Xilinx Artix-7 FPGAs. 
- 
-- 5-stage pipeline with hazard detection 
-- Full RV32I ISA support 
-- Data forwarding to reduce stalls 
-- Synthesized for 80+ MHz 
-- Synthesized for 80+ MHz 
-- Synthesized for 80+ MHz 
-- ~15K LUTs on Artix-7 
- 
-See `docs/ARCHITECTURE.md` for detailed pipeline design. 
- 
-See `docs/SYNTHESIS_RESULTS.md` for Vivado synthesis metrics. 
- 
- 
-- `rtl/` - Verilog RTL modules 
-- `sim/` - Testbenches 
-- `sim/` - Testbenches 
-- `docs/` - Testbenches 
-- `vivado/` - Testbenches 
